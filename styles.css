@@ -14,13 +14,58 @@ body {
     min-height: 100vh;
 }
 
-
 .side-panel {
     background-color: #e2725b;
     width: 100mm;
     min-height: 100vh;
+    position: relative; /* Needed for pseudo-element positioning */
 }
 
+/* Top geometric element */
+.side-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 350px; /* Adjust height */
+    background-color: black; /* Color of the geometric design */
+    clip-path: polygon(0 0, 50% 100%, 100% 0); /* Example shape */
+}
+
+/* Bottom geometric element */
+.side-panel::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 350px; /* Adjust height */
+    background-color: black; /* Color of the geometric design */
+    clip-path: polygon(0 100%, 50% 0, 100% 100%); /* Example shape */
+}
+
+/* Left geometric element */
+.side-panel::nth-child(1) {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px; /* Adjust width */
+    height: 100%; /* Full height */
+    background-color: black; /* Color of the geometric design */
+}
+
+/* Right geometric element */
+.side-panel::nth-child(2) {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px; /* Adjust width */
+    height: 100%; /* Full height */
+    background-color: black; /* Color of the geometric design */
+}
 
 .container {
     background-color: #f4d398;
@@ -28,8 +73,9 @@ body {
     max-width: 1200px;
     padding: 20px;
     box-sizing: border-box;
+    border: 10px solid black; /* Optional: border to enhance pottery effect */
+    position: relative;
 }
-
 
 .float-left {
     float: left;
@@ -45,19 +91,16 @@ figure {
     width: 400px;
 }
 
-
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-
 figcaption {
     font-size: 0.9em;
     color: #555;
 }
-
 
 p {
     clear: both;
