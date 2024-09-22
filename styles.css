@@ -3,34 +3,34 @@ body {
     font-family: 'Calibri', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e2725b; /* Terracotta for the entire body (side panels) */
+    background-color: #e2725b;
+    position: relative;
 }
 
-/* Wrapper to hold the content and side panels */
 .wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
 }
 
-/* Side panels (Terracotta orange) */
+
 .side-panel {
-    background-color: #e2725b; /* Terracotta orange */
-    width: 100mm; /* Set width to 100mm for side panels */
-    min-height: 100vh; /* Full height to match the viewport */
+    background-color: #e2725b;
+    width: 100mm;
+    min-height: 100vh;
 }
 
-/* Main content area (Sandstone yellow center) */
+
 .container {
-    background-color: #f4d398; /* Sandstone yellow for the center column */
-    width: calc(100% - 200mm); /* Remaining space between the side panels */
-    max-width: 1200px; /* Maximum width of the main content */
+    background-color: #f4d398;
+    width: calc(100% - 200mm);
+    max-width: 1200px;
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* Floated image styles */
+
 .float-left {
     float: left;
     margin: 0 20px 20px 0;
@@ -45,23 +45,28 @@ figure {
     width: 400px;
 }
 
+
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
+
 figcaption {
     font-size: 0.9em;
     color: #555;
 }
 
-/* Clear floats for paragraphs */
+
 p {
     clear: both;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
-/* Text styling for headers and paragraphs */
 h1 {
     font-size: 2em;
     font-weight: bold;
@@ -72,15 +77,17 @@ h2 {
     font-weight: bold;
 }
 
-p {
-    font-size: 1em;
-    line-height: 1.6; /* Line spacing for readability */
-}
-
 footer {
     text-align: center;
     font-size: 0.9em;
     padding: 20px 0;
-    background-color: #e2725b; /* Terracotta footer for visual consistency */
+    background-color: #e2725b;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #e2725b;
     color: white;
 }
