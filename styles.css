@@ -1,0 +1,98 @@
+/* General body styling */
+body {
+    font-family: 'Calibri', sans-serif; /* Sets Calibri as the font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper to hold everything in the middle */
+.container {
+    max-width: 1200px; /* Total width (center + side panels) */
+    margin: 0 auto; /* Center-aligns the container */
+    background-color: #f4d398; /* Sandstone yellow center */
+}
+
+/* Side panels for the terracotta orange */
+.side-panel-left, .side-panel-right {
+    background-color: #e2725b; /* Terracotta orange */
+    width: 100mm; /* Set the side panels to 100mm */
+    height: 100%; /* Full height of the page */
+    position: fixed;
+    top: 0;
+}
+
+.side-panel-left {
+    left: 0;
+}
+
+.side-panel-right {
+    right: 0;
+}
+
+/* Main content area (the part with text and images) */
+.main-content {
+    padding: 20px;
+    background-color: #f4d398; /* Sandstone yellow */
+    box-sizing: border-box;
+}
+
+/* Floated image styles */
+.float-left {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+figure {
+    width: 400px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Clear floats for paragraphs */
+p {
+    clear: both;
+}
+
+/* Text styling for headers and paragraphs */
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6; /* Line spacing for readability */
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 20px 0;
+    background-color: #e2725b; /* Terracotta footer for visual consistency */
+    color: white;
+}
+
+/* Ensure the container doesn't overlap the side panels */
+.container {
+    margin-left: 100mm; /* Matches side panel width */
+    margin-right: 100mm;
+}
