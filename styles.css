@@ -1,38 +1,32 @@
 /* General body styling */
 body {
-    font-family: 'Calibri', sans-serif; /* Sets Calibri as the font */
+    font-family: 'Calibri', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #e2725b; /* Terracotta for the entire body (side panels) */
 }
 
-/* Wrapper to hold everything in the middle */
-.container {
-    max-width: 1200px; /* Total width (center + side panels) */
-    margin: 0 auto; /* Center-aligns the container */
-    background-color: #f4d398; /* Sandstone yellow center */
+/* Wrapper to hold the content and side panels */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh; /* Full viewport height */
 }
 
-/* Side panels for the terracotta orange */
-.side-panel-left, .side-panel-right {
+/* Side panels (Terracotta orange) */
+.side-panel {
     background-color: #e2725b; /* Terracotta orange */
-    width: 100mm; /* Set the side panels to 100mm */
-    height: 100%; /* Full height of the page */
-    position: fixed;
-    top: 0;
+    width: 100mm; /* Set width to 100mm for side panels */
+    min-height: 100vh; /* Full height to match the viewport */
 }
 
-.side-panel-left {
-    left: 0;
-}
-
-.side-panel-right {
-    right: 0;
-}
-
-/* Main content area (the part with text and images) */
-.main-content {
+/* Main content area (Sandstone yellow center) */
+.container {
+    background-color: #f4d398; /* Sandstone yellow for the center column */
+    width: calc(100% - 200mm); /* Remaining space between the side panels */
+    max-width: 1200px; /* Maximum width of the main content */
     padding: 20px;
-    background-color: #f4d398; /* Sandstone yellow */
     box-sizing: border-box;
 }
 
@@ -89,10 +83,4 @@ footer {
     padding: 20px 0;
     background-color: #e2725b; /* Terracotta footer for visual consistency */
     color: white;
-}
-
-/* Ensure the container doesn't overlap the side panels */
-.container {
-    margin-left: 100mm; /* Matches side panel width */
-    margin-right: 100mm;
 }
